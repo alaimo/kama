@@ -15,7 +15,7 @@ describe('Kama', function() {
 	this.timeout(5000);
 
 	before(function() {
-		kama.configure([file1, file2]);
+		kama.configure([file2, file1]);
 	});
 
 	it('should use the defualt locale', function() {
