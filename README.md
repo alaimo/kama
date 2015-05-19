@@ -1,2 +1,5 @@
 # kama
 Simple string localization for Node JS using the nunjucks templating engine.
+
+### Installation
+`npm install --save kama`
