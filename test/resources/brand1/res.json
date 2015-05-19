@@ -1,0 +1,26 @@
+{
+	"hello": {
+		"en_US": "Hello",
+		"fr_FR": "Bonjour",
+		"es_ES": "Hola"
+	},
+	"hello_brand": {
+		"en_US": "Hello, Brand 1",
+		"fr_FR": "Bonjour, Brand 1",
+		"es_ES": "Hola, Brand 1"
+	},
+	"hello_params": {
+		"en_US": "Hello, {{ brand }}",
+		"fr_FR": "Bonjour, {{ brand }}",
+		"es_ES": "Hola, {{ brand }}"
+	},
+	"hello_custom_params": {
+		"en_US": "Hello, ${brand}",
+		"fr_FR": "Bonjour, ${brand}",
+		"es_ES": "Hola, ${brand}"
+	},
+	"hello_filter": {
+		"en_US": "Hello, {{ foo | bar }}"
+	}
+
+}

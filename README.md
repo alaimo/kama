@@ -1,2 +1,2 @@
-# resjs
-Simple string localization for Node JS
+# kama
+Simple string localization for Node JS using the nunjucks.
