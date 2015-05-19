@@ -49,7 +49,7 @@ Cascade resource files
 var require('kama');
 kama.configure([
   'resources/brand1/res.js',
-  'resources/brand1/res.js'
+  'resources/brand2/res.js'
 ]);
 console.log(kama.translate('hello_brand', null, 'fr_FR)) // Bonjour, Brand 2
 console.log(kama.translate('hello_brand')) // Hello, Brand 1
