@@ -1,2 +1,2 @@
 # kama
-Simple string localization for Node JS using the nunjucks.
+Simple string localization for Node JS using the nunjucks templating engine.
