@@ -156,11 +156,18 @@ console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, emails Bo
 console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, audits Bob
 ```
 
+## Options
+The following values can be set in the opts parameter of `kama.configure([files], opts)` or `new kama.Kama([files], opts)`.
+* __defaultLocale__: The default locale.  Defaults to "en_US".
+* __env__: Custom nunjucks environment
+* __tags__: Nunjucks syntax customization object
+
+
 ## Notes
 * Unless an environment or tags object is specified, kama will use the default nunjucks environment.
 * Cascaded files are evaluated in order of their placement in the array.
-* look ups check key>locale then key>defaultLocale in each file.
-* "en_US" is the defaultLocale by default.  You can set defaultLocale in the opts parameter.
+* `kama.translate(key, params, locale)` will check key>locale then key>defaultLocale in each file until a truthy string is found.
+* If `kama.translate(key, params, locale)` fails to find a valid string it will return the key parameter.
 
 ## License
 
