@@ -18,9 +18,8 @@ res.translate(key, params, locale);
 ```
 
 ## Example
-Create a bunch of json resource files with the following format
-
-```json
+```js
+// Create a bunch of json resource files with the following format
 {
   "hello": {
     "en_US": "Hello",
@@ -28,14 +27,14 @@ Create a bunch of json resource files with the following format
     "es_ES": "Hola"
   }
 }
-```
 
-Then configure the global kama instance
-```js
+// Then configure the global kama instance
 var kama = require('kama');
 kama.configure('resources/res.json');
-console.log(kama.translate('hello')) // Hello
-console.log(kama.translate('hello', null, 'fr_FR')) // Bonjour
+console.log(kama.translate('hello')) 
+// Hello
+console.log(kama.translate('hello', null, 'fr_FR')) 
+// Bonjour
 ```
 
 ## Features
@@ -64,8 +63,10 @@ kama.configure([
   'resources/brand2/res.js',
   'resources/brand1/res.js'
 ]);
-console.log(kama.translate('hello_brand', null, 'fr_FR)) // Bonjour, Brand 2
-console.log(kama.translate('hello_brand')) // Hello, Brand 1
+console.log(kama.translate('hello_brand', null, 'fr_FR)); 
+// Bonjour, Brand 2
+console.log(kama.translate('hello_brand'));
+// Hello, Brand 1
 ```
 
 Resolve parameters
@@ -79,7 +80,8 @@ Resolve parameters
 
 ...
 
-console.log(kama.translate('hello_params', {name: 'Bob'})); // Hello, Bob
+console.log(kama.translate('hello_params', {name: 'Bob'})); 
+// Hello, Bob
 ```
 
 Change template tags
@@ -99,7 +101,8 @@ kama.configure('resources/res.json', {
 		variableEnd: ']'
 	}
 });
-console.log(kama.translate('hello_params', {name:'Bob'})); // Hello, Bob
+console.log(kama.translate('hello_params', {name:'Bob'})); 
+// Hello, Bob
 ```
 
 Use your own nunjucks environment
@@ -122,7 +125,8 @@ env.addFilter('bar', function(str) {
 });
 
 kama.configure('resources/res.json', {env: env});
-console.log(kama.translate('hello_filter')); // Hello, Bar
+console.log(kama.translate('hello_filter')); 
+// Hello, Bar
 ```
 
 Use multiple kama instances
@@ -152,8 +156,10 @@ var kama = require('kama');
 	}),
   audits = new kama.Kama('resources/audits.json');
   
-console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, emails Bob
-console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, audits Bob
+console.log(emails.translate('hello_params', {name: 'Bob'}); 
+// Hello, emails Bob
+console.log(audits.translate('hello_params', {name: 'Bob'}); 
+// Hello, audits Bob
 ```
 
 ## Options
