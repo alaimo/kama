@@ -2,6 +2,16 @@
   "name": "kama",
   "version": "0.2.0",
   "description": "Simple string localization for Node JS",
+  "keywords": [
+    "localization",
+    "internationalization",
+    "i18n",
+    "locale",
+    "resource",
+    "res",
+    "strings",
+    "nunjucks"
+  ],
   "main": "lib/kama.js",
   "scripts": {
     "test": "grunt test"
