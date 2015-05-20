@@ -1,10 +1,10 @@
 # kama
 Simple string localization for Node JS using the nunjucks templating engine.
 
-### Installation
+## Installation
 `npm install --save kama`
 
-### Use
+## Use
 ```js
 var kama = require('kama');
 
@@ -17,7 +17,7 @@ var res = new kama.Kama([files], opts);
 res.translate(key, params, locale);
 ```
 
-### Example
+## Example
 Create a bunch of json resource files with the following format
 
 ```json
@@ -38,7 +38,7 @@ console.log(kama.translate('hello')) // Hello
 console.log(kama.translate('hello', null, 'fr_FR')) // Bonjour
 ```
 
-### Features
+## Features
 Cascade resource files
 ```js
 // saved in app_root/resources/brand1/res.js
@@ -156,7 +156,7 @@ console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, emails Bo
 console.log(emails.translate('hello_params', {name: 'Bob'}); // Hello, audits Bob
 ```
 
-### Notes
+## Notes
 * Unless an environment or tags object is specified, kama will use the default nunjucks environment.
 * Cascaded files are evaluated in order of their placement in the array.
 * look ups check key>locale then key>defaultLocale in each file.
