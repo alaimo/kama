@@ -1,6 +1,6 @@
 {
-	"hello_brand": {
-		"en_US": "Hello, Brand 2",
-		"es_ES": "Hola, Brand 2"
-	}
+  "hello_brand": {
+    "en_US": "Hello, Brand 2",
+    "es_ES": "Hola, Brand 2"
+  }
 }
