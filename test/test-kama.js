@@ -41,6 +41,13 @@ describe('Kama', function() {
 		expect(kama.translate('hello_params', params, FR_FR)).to.be('Bonjour, Blah');
 	});
 
+	it('should return passed key on missing key', function() {
+		var custom = new kama.Kama(
+			file1
+		);
+		expect(custom.translate('___nonexistent', params)).to.be('___nonexistent');
+	});
+
 	describe('#constructor', function() {
 
 		it('should create a seperate instance', function() {
@@ -58,6 +65,18 @@ describe('Kama', function() {
 				{tags: {variableStart: '${', variableEnd: '}'}
 			});
 			expect(custom.translate('hello_custom_params', params)).to.be('Hello, Blah');
+		});
+
+		it('should accept custom missingKeyCallback function', function() {
+			var custom = new kama.Kama(
+				file1,
+				{
+					missingKeyCallback: function(key) {
+						return 'test it works';
+					}
+				}
+			);
+			expect(custom.translate('___nonexistent', params)).to.be('test it works');
 		});
 
 		it('should accept a custom nunjucks environment', function() {
